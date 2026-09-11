@@ -20,8 +20,12 @@ public class QuestionService {
         queArr[2] = q3;
         queArr[3] = q4;
         queArr[4] = q5;
+        int i =1;
+
+        float calculateTotal = 0;
 
         for (Question q : queArr) {
+            System.out.println("Question :" + i++);
             System.out.println(q.getQuestion());
             System.out.println(q.getOption1());
             System.out.println(q.getOption2());
@@ -29,15 +33,19 @@ public class QuestionService {
             System.out.println(q.getOption4());
 
             Scanner sc = new Scanner(System.in);
-            System.out.println("Choose the option : ");
+            System.out.print("Choose the option : ");
             String val = sc.nextLine();
             String ans = q.getAnswer();
             System.out.println(ans);
             if (val.equals(ans)) {
-                System.out.println("correct");
+                System.out.println("correct +2");
+                calculateTotal += 2;
             } else {
-                System.out.println("Wrong ans");
+                System.out.println("Wrong ans -0.25");
+                calculateTotal -= 0.25;
             }
         }
+
+        System.out.println(calculateTotal);
     }
 }
