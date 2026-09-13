@@ -6,9 +6,8 @@ public class Question {
     private String option3;
     private String option4;
     private String answer;
-    
-    public Question(int id, String question, String option1, String option2, String option3, String option4,
-            String answer) {
+  
+    public Question(int id, String question, String option1, String option2, String option3, String option4, String answer) {
         this.id = id;
         this.question = question;
         this.option1 = option1;
@@ -65,8 +64,7 @@ public class Question {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
-
-    public static void main(String[] args) {
-        
-    }
 }
+
+
+

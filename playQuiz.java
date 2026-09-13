@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
-public class QuestionService {
+public class playQuiz {
     Question queArr[] = new Question[5];
 
     public void displayQuestions() {
+
         Question q1 = new Question(1, "Which of the following is used to create an object in Java?", "class", "new",
                 "this", "object", "new");
         Question q2 = new Question(2, "What is the default value of an int instance variable in Java?", "null", "1",
@@ -20,10 +21,13 @@ public class QuestionService {
         queArr[2] = q3;
         queArr[3] = q4;
         queArr[4] = q5;
-        int i =1;
+    }
 
-        float calculateTotal = 0;
+    // ------------------Play---------------------------------
+    float calculateTotal = 0;
 
+    public void Letsplay(Studetns s) {
+        int i = 1;
         for (Question q : queArr) {
             System.out.println("Question :" + i++);
             System.out.println(q.getQuestion());
@@ -46,6 +50,7 @@ public class QuestionService {
             }
         }
 
-        System.out.println(calculateTotal);
+        s.setMarks(calculateTotal);
     }
+
 }
